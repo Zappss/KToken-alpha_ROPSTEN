@@ -54,7 +54,7 @@ contract KTokenIco is StandardToken {
     }
 
     function calculateTokenAmount(uint256 weiAmount) constant returns(uint256) {
-        // standard rate: 1 ETH : 3000 ₭
+        // standard rate: 1 ETH : 2000 ₭
         uint256 tokenAmount = weiAmount.mul(50);
         if (now <= startTimestamp + 7 days) {
             // +50% bonus during first week
