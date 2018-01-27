@@ -4,11 +4,11 @@ import 'zeppelin-solidity/contracts/token/ERC20Basic.sol';
 import 'zeppelin-solidity/contracts/token/StandardToken.sol';
 
 
-contract EspeoTokenIco is StandardToken {
+contract KTokenIco is StandardToken {
     using SafeMath for uint256;
 
-    string public name = "Espeo Token";
-    string public symbol = "ESP";
+    string public name = "K";
+    string public symbol = "₭";
     uint256 public decimals = 18;
 
     uint256 public totalSupply = 1000000 * (uint256(10) ** decimals);
@@ -26,7 +26,7 @@ contract EspeoTokenIco is StandardToken {
      */
     address public fundsWallet;
 
-    function EspeoTokenIco(
+    function KTokenIco(
         address _fundsWallet,
         uint256 _startTimestamp,
         uint256 _minCap,
@@ -54,7 +54,7 @@ contract EspeoTokenIco is StandardToken {
     }
 
     function calculateTokenAmount(uint256 weiAmount) constant returns(uint256) {
-        // standard rate: 1 ETH : 50 ESP
+        // standard rate: 1 ETH : 3000 ₭
         uint256 tokenAmount = weiAmount.mul(50);
         if (now <= startTimestamp + 7 days) {
             // +50% bonus during first week
