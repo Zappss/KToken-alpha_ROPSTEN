@@ -1,7 +1,7 @@
 {
-  "name": "token-ico-blog-example",
-  "version": "1.0.0",
-  "description": "Espeo Token and ICO example for a blog post",
+  "name": "K Token ICO implementation",
+  "version": "1.0.1",
+  "description": "K Token and ICO",
   "main": "index.js",
   "directories": {
     "test": "test"
